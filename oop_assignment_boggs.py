@@ -33,15 +33,17 @@ class User_Account:
         formatted_price = "$ " + '{:,.2f}'.format(self.account_balance)
         print("Name: " + self.account_owner + "\nAccount Number: " + str(self.account_num) +
               "\nAccount Balance: " + formatted_price)
+        return str("Name: " + self.account_owner + "\nAccount Number: " + str(self.account_num) + "\nAccount Balance: "
+                   + formatted_price)
 
 
 if __name__ == "__main__":
     account1 = User_Account("Abby", 12345)
     account1.deposit(400)
     account1.withdrawal(250)
-    account1.display()
+    display_info = account1.display()
 
     account2 = User_Account("Bob", 11111)
     account2.deposit(50)
     account2.withdrawal(100)
-    account2.display()
+    display_info2 = account2.display()
